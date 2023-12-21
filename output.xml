@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on darwin)" generated="20231220 11:06:50.626" rpa="false" schemaversion="4">
+<suite id="s1" name="testCases" source="/Users/macbookpro/development/python/basic-automation/auto/testCases.robot">
+<test id="s1-t1" name="testcase-login-1" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231220 11:06:50.772" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20231220 11:06:50.771" endtime="20231220 11:06:54.285"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@id='login2']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231220 11:06:54.287" level="INFO">Clicking element 'xpath://a[@id='login2']'.</msg>
+<status status="PASS" starttime="20231220 11:06:54.286" endtime="20231220 11:06:54.404"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://input[@id='loginusername']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231220 11:06:54.405" endtime="20231220 11:06:54.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231220 11:06:55.427" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231220 11:06:54.425" endtime="20231220 11:06:55.427"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginusername</arg>
+<arg>test-654321</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:06:55.428" level="INFO">Typing text 'test-654321' into text field 'id:loginusername'.</msg>
+<status status="PASS" starttime="20231220 11:06:55.428" endtime="20231220 11:06:55.676"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:06:55.677" level="INFO">Typing text '123456' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20231220 11:06:55.677" endtime="20231220 11:06:55.778"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@onclick='logIn()']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231220 11:06:55.779" level="INFO">Clicking element 'xpath://button[@onclick='logIn()']'.</msg>
+<status status="PASS" starttime="20231220 11:06:55.779" endtime="20231220 11:06:55.942"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231220 11:07:00.944" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231220 11:06:55.942" endtime="20231220 11:07:00.945"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://a[@id='nameofuser']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231220 11:07:00.945" endtime="20231220 11:07:00.973"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231220 11:07:00.973" endtime="20231220 11:07:01.113"/>
+</kw>
+<status status="PASS" starttime="20231220 11:06:50.771" endtime="20231220 11:07:01.114"/>
+</test>
+<status status="PASS" starttime="20231220 11:06:50.629" endtime="20231220 11:07:01.115"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testCases">testCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
